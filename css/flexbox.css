@@ -1,0 +1,92 @@
+.cabecalhoPrincipal .container{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.cabecalhoPrincipal-nav{
+    display: flex;
+    margin-left: 5px;
+}
+.rodapePrincipal-patrocinadores .container{
+   display: flex;
+   justify-content: space-between; /*dividir espaço que sobra*/
+}
+.rodapePrincipal-contatoForm-fieldset{
+    display: flex;
+}
+.rodapePrincipal-patrocinadores-list{
+    align-items: center;
+    display: flex;
+    justify-content: space-around; /*dividir espaço restate entre os itens*/
+    margin: 5%;
+    width: 70%;
+}
+.rodapePrincipal-navMap-list{
+    display: flex;
+    flex-flow: column wrap; /*simplificação do direction com wrap*/
+    height: 250px;
+}
+.conteudoPrincipal-cursos{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.conteudoPrincipal-cursos-link{
+    width: 23%;
+    margin: 1%;
+}
+.conteudoPrincipal-cursos-link:nth-child(4n){ /*selecionar multiplo de 4*/
+    margin-right: 0%;
+}
+.conteudoPrincipal-cursos-link:nth-child(4n+1){ /*selecionar multiplo de 4*/
+    margin-right: 0%;
+}
+.videoSobre .container{
+    display: flex;
+}
+.videoSobre-sobre{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-grow: 1;  /*pegar o tamanho restante e expandir*/
+}
+.videoSobre-sobre-list{
+    flex-grow: 1;
+}
+/*Parte Mobile*/
+@media(max-width: 768px){
+.cabecalhoPrincipal-nav{
+    flex-direction: column;
+}
+.cabecalhoPrincipal .container{
+    flex-direction: column;
+    align-items: initial;
+    text-align: center;
+}
+.conteudoPrincipal-cursos{
+    flex-direction: column;
+}
+.conteudoPrincipal-cursos-link{
+    width: 100%;
+}
+.rodapePrincipal-navMap-list{
+    height: auto;
+}
+.rodapePrincipal-patrocinadores .container{
+    align-items: center;
+    flex-direction: column;
+}
+.cabecalhoPrincipal-contaForm{
+    width: 100%;
+}
+.rodapePrincipal-patrocinadores-list{
+    margin: 0;
+    width: 100%;
+}
+.rodapePrincipal-contatoForm-fieldset{
+    justify-content: center;
+}
+.cabecalhoPrincipal-nav-link-app{
+    order: -1; /*Ordenar item*/
+}
+}
